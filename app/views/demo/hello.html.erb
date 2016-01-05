@@ -1,0 +1,40 @@
+<h1>Demo#For Hello</h1>
+<p>Hello Pal from Hello</p>
+
+<!--Note that without Equal Sign (=), this below will be a Declaration in Embedded Ruby-->
+<% 1 + 1%>
+
+<hr/>
+
+<!--This will work since it has Equal Sign (=). Target Declared-->
+<hr/>
+<% target = "Olaoluwa" %>
+<%= "Hello #{target}" %>
+
+<hr/>
+
+<!--Another one with loop-->
+<% 3.times do %>
+  <%= "Olaoluwaaa Ehn?" %><br/>
+<%end%>
+
+<!--Instance Variable Use-->
+<% @array.each do |n| %>
+    <%= n %><br/>
+<%end%>
+
+<!--Rails hyperlinks syntax-->
+<%= link_to('This link takes you to the Index Page since action => index', {:action => 'index'}) %>
+<hr/>
+<!--HTML hypertext llinks or doings-->
+<a href="/demo/index">Takes You to Index Page since :action specified Index Page</a>
+
+<hr/>
+<!--URL Params-->
+ID: <%= params[:id] %> <br/>
+ID: <%= @id %> <br/>
+Next Page: <%= @page.to_i + 1 %> <br/>
+
+<hr/>
+<p>Just inspecting our expectations</p>
+<%= params.inspect %>

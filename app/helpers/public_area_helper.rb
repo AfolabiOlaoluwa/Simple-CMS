@@ -1,0 +1,2 @@
+module PublicAreaHelper
+end

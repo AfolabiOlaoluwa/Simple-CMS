@@ -1,0 +1,21 @@
+<h1>Demo#For Index</h1>
+<p>Hello Pal from Index</p>
+
+<!--Rails hyperlinks syntax ie. ERB into HTML-->
+<%= link_to('This link takes you to the Hello Page since action => hello', {:action => 'hello'}) %>
+<br/>
+<!--HTML hypertext links or doings-->
+<a href="/demo/hello">Takes You to Hello Page since :action specified Hello Page</a>
+
+<br/>
+<!--URL Parameter e.g. ID = 1 and Page = 1. Just like looking into a Database  -->
+<%= link_to('This is a link for HELLO PAGE but with PARAMETERS. It still takes you to the Hello Page since action => hello', {:action => 'hello', :page => 5, :id => 1}) %>
+
+
+<br />
+<% name = 'Olaoluwa' %>
+<% name = "Sorry!'); alert('I hacked you!" %>
+
+<%= link_to('Roar', '#', :onclick => "jsRoar('#{j(name)}'); return true;") %>
+
+<%= javascript_tag("jsRoar('#{j(name)}');") %>

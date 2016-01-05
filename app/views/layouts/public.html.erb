@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple CMS <%= " | #{@page_title}" if @page_title %></title>
+  <%= stylesheet_link_tag('application', :media => 'all') %>
+</head>
+<body>
+<div id="header">
+  <h1>Simple CMS</h1>
+</div>
+<div id="main">
+  <div id="navigation">
+    <%=	render(:partial => 'layouts/navigation', :locals => {:subjects => @subjects}) %>
+  </div>
+  <div id="content">
+    <%= yield %>
+  </div>
+  <div class="clear"></div>
+</div>
+
+<!--I did comment this out since this View is for public area and the RoR link_to links to Home of admin--->
+<!--<div id="footer2">
+  <%#= link_to('Home', {:controller => 'access'}, :class => 'back-link') %> </p>
+</div>--->
+
+<div id="footer">
+  <p id="copyright">&copy; afolabiolaoluwa.com / Afolabi Olaoluwa</p>
+</div>
+</body>
+</html>

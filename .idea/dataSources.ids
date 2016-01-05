@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="development" uuid="149d4aa7-9ac9-4bce-8ddd-6bd3887739f2">
+    <database-info product="SQLite" version="3.8.9" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native"/>
+    <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed"/>
+    <schema name="" catalog=""/>
+    <table name="admin_users" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="first_name" sqlType="VARCHAR(25)" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="last_name" sqlType="VARCHAR(50)" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="email" sqlType="VARCHAR(100)" precision="2000000000" scale="10" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="hashed_password" sqlType="VARCHAR(40)" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="created_at" sqlType="DATETIME" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="updated_at" sqlType="DATETIME" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="username" sqlType="VARCHAR(25)" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <primary-key columns="id"/>
+      <index name="index_admin_users_on_username" unique="true" columns="username"/>
+    </table>
+    <table name="admin_users_pages" schema="" catalog="" type="TABLE">
+      <column name="admin_user_id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
+      <column name="page_id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
+      <index name="index_admin_users_pages_on_admin_user_id_and_page_id" unique="true" columns="admin_user_id,page_id"/>
+    </table>
+    <table name="pages" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="subject_id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
+      <column name="name" sqlType="VARCHAR(255)" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="permalink" sqlType="INTEGER" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
+      <column name="position" sqlType="INTEGER" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
+      <column name="visible" sqlType="BOOLEAN" precision="2000000000" scale="10" nullable="true" jdbcType="4" def="J2Yn"/>
+      <column name="created_at" sqlType="DATETIME" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="updated_at" sqlType="DATETIME" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <primary-key columns="id"/>
+      <index name="index_pages_on_permalink" unique="true" columns="permalink"/>
+      <index name="index_pages_on_subject_id" unique="true" columns="subject_id"/>
+    </table>
+    <table name="schema_migrations" schema="" catalog="" type="TABLE">
+      <column name="version" sqlType="VARCHAR(255)" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
+      <index name="unique_schema_migrations" unique="true" columns="version"/>
+    </table>
+    <table name="section_edits" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="admin_user_id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
+      <column name="section_id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
+      <column name="summary" sqlType="VARCHAR(255)" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="created_at" sqlType="DATETIME" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="updated_at" sqlType="DATETIME" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <primary-key columns="id"/>
+      <index name="index_section_edits_on_admin_user_id_and_section_id" unique="true" columns="admin_user_id,section_id"/>
+    </table>
+    <table name="sections" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="page_id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
+      <column name="name" sqlType="VARCHAR(255)" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="position" sqlType="INTEGER" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
+      <column name="visible" sqlType="BOOLEAN" precision="2000000000" scale="10" nullable="true" jdbcType="4" def="J2Yn"/>
+      <column name="content_type" sqlType="VARCHAR(255)" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="content" sqlType="TEXT" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="created_at" sqlType="DATETIME" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="updated_at" sqlType="DATETIME" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <primary-key columns="id"/>
+      <index name="index_sections_on_page_id" unique="true" columns="page_id"/>
+    </table>
+    <table name="sqlite_sequence" schema="" catalog="" type="TABLE">
+      <column name="name" sqlType="" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="seq" sqlType="" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="subjects" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="name" sqlType="VARCHAR(255)" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="position" sqlType="INTEGER" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
+      <column name="visible" sqlType="BOOLEAN" precision="2000000000" scale="10" nullable="true" jdbcType="4" def="J2Yn"/>
+      <column name="created_at" sqlType="DATETIME" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="updated_at" sqlType="DATETIME" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <primary-key columns="id"/>
+    </table>
+  </data-source>
+</component>
