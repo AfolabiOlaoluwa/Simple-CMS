@@ -14,8 +14,8 @@
 * Run <tt>rails s</tt> to start the server.
 
 * Go to your browser then type <tt>localhost:3000/admin</tt> to get to the admin page of the Simple-CMS
-	*Username: Olaoluwa123
-	*Password: testpassword
+	* Username: Olaoluwa123
+	* Password: testpassword
 	
 	*Note: When you login, you have the ability to create new users/previlledges for other persons to be able to manage the CMS as admin.
 	
