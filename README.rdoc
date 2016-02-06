@@ -14,16 +14,15 @@
 * Run <tt>rails s</tt> to start the server.
 
 * Go to your browser then type <tt>localhost:3000/admin</tt> to get to the admin page of the Simple-CMS
-
-<tt>Username: Olaoluwa123</tt>
-<tt>Password: testpassword</tt>
+1. <tt>Username: Olaoluwa123</tt>
+2. <tt>Password: testpassword</tt>
 <tt>Note: When you login, you have the ability to create new users/previlledges for other persons to be able to manage the CMS as admin.</tt>
 	
 * To see the Frontend (i.e. the part the public will see) of the Application, type <tt>localhost:3000</tt> into your broswer and enter
 
 == Errors you are likely to see
 1. This error could be as a result of changing/hashing out my secret keys in https://github.com/AfolabiOlaoluwa/Simple-CMS/blob/master/config/secrets.yml
-	Note: To fix this you might wanna create your own Rails app, and copy the resource code to all neccesary folders, but leave out your 				own <tt>secrets.yml</tt> file. Then, go through the steps above.
+Note: To fix this you might wanna create your own Rails app, and copy the resource code to all neccesary folders, but leave out your own <tt>secrets.yml</tt> file. Then, go through the steps above.
 
 == Application DEMO
  --Coming soon, just few moments to host it live--
