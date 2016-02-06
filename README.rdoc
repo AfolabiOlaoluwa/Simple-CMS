@@ -1,28 +1,34 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+== Steps necessary to get the application up and running.
 
-* Ruby version
+* Download the source code, then in the command prompt/IDE, change directory to Simple-CMS.
 
-* System dependencies
+* Proceed and run <tt>rake db:create</tt> once to create your db tables.
 
-* Configuration
+* Run <tt>rake db:migrate</tt> to run your migrations.
 
-* Database creation
+* Run <tt>bundle install</tt> just to install all the dependencies needed for the app to run.
 
-* Database initialization
+* Run <tt>rails s</tt> to start the server.
 
-* How to run the test suite
+* Go to your browser then type <tt>localhost:3000/admin</tt> to get to the admin page of the Simple-CMS
+	Username: Olaoluwa123
+	Password: testpassword
+	
+	Note: When you login, you have the ability to create new users/previlledges for other persons to be able to manage the CMS as admin.
+	
+* To see the Frontend (i.e. the part the public will see) of the Application, type <tt>localhost:3000</tt> into your broswer and enter.
 
-* Services (job queues, cache servers, search engines, etc.)
+== Errors you are likely to see
+1. This error could be as a result of changing/hashing out my secret keys in https://github.com/AfolabiOlaoluwa/Simple-CMS/blob/master/config/secrets.yml
+	Note: To fix this you might wanna create your own Rails app, and copy the resource code to all neccesary folders, but leave out your 				own <tt>secrets.yml</tt> file. Then, go through the steps above.
 
-* Deployment instructions
+== Application DEMO
+ --Coming soon, just few moments to host it live--
 
-* ...
+== Consult this URL for RoR Guides  http://guides.rubyonrails.org/
 
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+== Bugs or Glitches
+I can say this is still a work to collaborate on just to help Newbies into Ruby on Rails as a Training material, mostly to learn Rails CRUD. I belive we can make this better and better and am calling for collaborations on this project.
